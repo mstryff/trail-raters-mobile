@@ -98,40 +98,44 @@ function scene:create( event )
     signInBox:setFillColor(0.2,0.6,0.2, 0.8)
     signInBox:setStrokeColor(0.2,0.9,0.4, 0.9)
 
-    local title = display.newText("Trail Raters", 100, 32, native.systemFont, 32)
+    local title = display.newText("Trail Raters", 100, 36, "Cronus Round", 36)
     title.x = display.contentCenterX
     title.y = display.contentHeight * 0.08
     title:setFillColor( 0 )
     sceneGroup:insert( title )
 
-    local header = display.newText("Sign In", 100, 28, native.systemFont, 28)
+    local header = display.newText("Sign In", 100, 32, "Cronus Round", 32)
     header.x = display.contentCenterX
     header.y = display.contentHeight * 0.25
     header:setFillColor(0)
     sceneGroup:insert(header)
 
-    message = display.newText("", 100, 16, native.systemFont, 16)
+    message = display.newText("", 100, 20, "Cronus Round", 20)
     message.x = display.contentCenterX
     message.y = display.contentHeight * 0.29
     message:setFillColor(1, 0, 0)
     sceneGroup:insert(message)
 
-    local usernameText = display.newText("Username", 100, 18, native.systemFont, 18)
+    local usernameText = display.newText("Username", 100, 22, "Cronus Round", 22)
     usernameText.x = display.contentWidth * 0.2
     usernameText.y = display.contentHeight * 0.33
     usernameText:setFillColor(0)
     sceneGroup:insert(usernameText)
 
-    usernameInput = native.newTextField(display.contentCenterX, display.contentHeight * 0.38, display.contentWidth * 0.7, 32)
+    usernameInput = native.newTextField(display.contentCenterX, display.contentHeight * 0.38, display.contentWidth * 0.7, 36)
+    usernameInput.font = native.newFont("Cronus Round", 36)
+    usernameInput:resizeFontToFitHeight()
 
-    local passwordText = display.newText("Password", 100, 18, native.systemFont, 18)
+    local passwordText = display.newText("Password", 100, 22, "Cronus Round", 22)
     passwordText.x = display.contentWidth * 0.2
     passwordText.y = display.contentHeight * 0.47
     passwordText:setFillColor(0)
     sceneGroup:insert(passwordText)
 
-    passwordInput = native.newTextField(display.contentCenterX, display.contentHeight * 0.52, display.contentWidth * 0.7, 32)
+    passwordInput = native.newTextField(display.contentCenterX, display.contentHeight * 0.52, display.contentWidth * 0.7, 36)
     passwordInput.isSecure = true
+    passwordInput.font = native.newFont("Cronus Round", 36)
+    passwordInput:resizeFontToFitHeight()
 
     -- Create the widget
     local signInButton = widget.newButton({
@@ -141,7 +145,8 @@ function scene:create( event )
         height = 100,
         shape = "roundedRect",
         cornerRadius = 5,
-        fontSize = 28,
+        fontSize = 32,
+        font = "Cronus Round",
         fillColor = { default={0.2,0.6,0.2,1}, over={0.1,1,0.7,0.4} },
         strokeColor = { default={0.2,0.9,0.4,1}, over={0.8,1,0.8,1} },
         strokeWidth = 4,
@@ -158,7 +163,8 @@ function scene:create( event )
         height = 50,
         shape = "roundedRect",
         cornerRadius = 5,
-        fontSize = 16,
+        fontSize = 20,
+        font = "Cronus Round",
         fillColor = { default={0.2,0.6,0.2,1}, over={0.1,1,0.7,0.4} },
         strokeColor = { default={0.2,0.9,0.4,1}, over={0.8,1,0.8,1} },
         strokeWidth = 4,

@@ -79,7 +79,7 @@ function scene:create( event )
     titleBox:setFillColor(0.2,0.6,0.2, 0.8)
     titleBox:setStrokeColor(0.2,0.9,0.4, 0.9)
 
-    local title = display.newText("Trail Raters", 100, 32, native.systemFont, 32)
+    local title = display.newText("Trail Raters", 100, 36, "Cronus Round", 36)
     title.x = display.contentCenterX
     title.y = display.contentHeight * 0.08
     title:setFillColor(0)
@@ -90,61 +90,61 @@ function scene:create( event )
     writeBox:setFillColor(0.2,0.6,0.2, 0.8)
     writeBox:setStrokeColor(0.2,0.9,0.4, 0.9)
 
-    local header = display.newText("Edit Report", 100, 24, native.systemFont, 24)
+    local header = display.newText("Edit Report", 100, 28, "Cronus Round", 28)
     header.x = display.contentCenterX
     header.y = display.contentHeight * 0.18
     header:setFillColor(0)
     sceneGroup:insert(header)
 
-    message = display.newText("", 100, 16, native.systemFont, 16)
+    message = display.newText("", 100, 20, "Cronus Round", 20)
     message.x = display.contentCenterX
     message.y = display.contentHeight * 0.22
     message:setFillColor(1, 0, 0)
     sceneGroup:insert(message)
 
-    local trailText = display.newText("Trail Name", 100, 18, native.systemFont, 18)
+    local trailText = display.newText("Trail Name", 100, 22, "Cronus Round", 22)
     trailText.x = display.contentWidth * 0.1 + trailText.contentWidth * 0.5
     trailText.y = display.contentHeight * 0.26
     trailText:setFillColor(0)
     sceneGroup:insert(trailText)
 
-    inputTrail = native.newTextField(display.contentCenterX, display.contentHeight * 0.31, display.contentWidth * 0.7, 32)
+    inputTrail = native.newTextField(display.contentCenterX, display.contentHeight * 0.31, display.contentWidth * 0.7, 36)
     inputTrail.text = params.trail
 
-    local ratingText = display.newText("Rating", 100, 18, native.systemFont, 18)
+    local ratingText = display.newText("Rating", 100, 22, "Cronus Round", 22)
     ratingText.x = display.contentWidth * 0.1 + ratingText.contentWidth * 0.5
     ratingText.y = display.contentHeight * 0.36
     ratingText:setFillColor(0)
     sceneGroup:insert(ratingText)
 
-    inputRating = native.newTextField(display.contentCenterX, display.contentHeight * 0.41, display.contentWidth * 0.7, 32)
+    inputRating = native.newTextField(display.contentCenterX, display.contentHeight * 0.41, display.contentWidth * 0.7, 36)
     inputRating.text = params.rating
 
-    local textText = display.newText("Notes", 100, 18, native.systemFont, 18)
+    local textText = display.newText("Notes", 100, 22, "Cronus Round", 22)
     textText.x = display.contentWidth * 0.1 + textText.contentWidth * 0.5
     textText.y = display.contentHeight * 0.46
     textText:setFillColor(0)
     sceneGroup:insert(textText)
 
-    inputText = native.newTextField(display.contentCenterX, display.contentHeight * 0.51, display.contentWidth * 0.7, 32)
+    inputText = native.newTextField(display.contentCenterX, display.contentHeight * 0.51, display.contentWidth * 0.7, 36)
     inputText.text = params.description
 
-    local latitudeText = display.newText("Latitude", 100, 18, native.systemFont, 18)
+    local latitudeText = display.newText("Latitude", 100, 22, "Cronus Round", 22)
     latitudeText.x = display.contentWidth * 0.1 + latitudeText.contentWidth * 0.5
     latitudeText.y = display.contentHeight * 0.56
     latitudeText:setFillColor(0)
     sceneGroup:insert(latitudeText)
 
-    inputLatitude = native.newTextField(display.contentCenterX, display.contentHeight * 0.61, display.contentWidth * 0.7, 32)
+    inputLatitude = native.newTextField(display.contentCenterX, display.contentHeight * 0.61, display.contentWidth * 0.7, 36)
     inputLatitude.text = params.latitude
 
-    local longitudeText = display.newText("Longitude", 100, 18, native.systemFont, 18)
+    local longitudeText = display.newText("Longitude", 100, 22, "Cronus Round", 22)
     longitudeText.x = display.contentWidth * 0.1 + longitudeText.contentWidth * 0.5
     longitudeText.y = display.contentHeight * 0.66
     longitudeText:setFillColor(0)
     sceneGroup:insert(longitudeText)
 
-    inputLongitude = native.newTextField(display.contentCenterX, display.contentHeight * 0.71, display.contentWidth * 0.7, 32)
+    inputLongitude = native.newTextField(display.contentCenterX, display.contentHeight * 0.71, display.contentWidth * 0.7, 36)
     inputLongitude.text = params.longitude
 
     local setCoordinatesButton = widget.newButton({
@@ -153,7 +153,8 @@ function scene:create( event )
         height = 40,
         shape = "roundedRect",
         cornerRadius = 5,
-        fontSize = 16,
+        fontSize = 20,
+        font = "Cronus Round",
         fillColor = { default={0.2,0.6,0.2,1}, over={0.1,1,0.7,0.4} },
         strokeColor = { default={0,0.8,0.4,1}, over={0.8,1,0.8,1} },
         strokeWidth = 4,
@@ -169,7 +170,8 @@ function scene:create( event )
         height = 80,
         shape = "roundedRect",
         cornerRadius = 5,
-        fontSize = 24,
+        fontSize = 28,
+        font = "Cronus Round",
         fillColor = { default={0.2,0.6,0.2,1}, over={0.1,1,0.7,0.4} },
         strokeColor = { default={0,0.8,0.4,1}, over={0.8,1,0.8,1} },
         strokeWidth = 4,

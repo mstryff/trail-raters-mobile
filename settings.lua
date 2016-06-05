@@ -84,13 +84,13 @@ function scene:create( event )
     titleBox:setFillColor(0.2,0.6,0.2, 0.8)
     titleBox:setStrokeColor(0.2,0.9,0.4, 0.9)
 
-    local title = display.newText("Trail Raters", 100, 32, native.systemFont, 32)
+    local title = display.newText("Trail Raters", 100, 36, "Cronus Round", 36)
     title.x = display.contentCenterX
     title.y = display.contentHeight * 0.08
     title:setFillColor(0)
     sceneGroup:insert(title)
 
-    local header = display.newText("Settings", 100, 24, native.systemFont, 24)
+    local header = display.newText("Settings", 100, 28, "Cronus Round", 28)
     header.x = display.contentCenterX
     header.y = display.contentHeight * 0.16
     header:setFillColor(0)
@@ -101,7 +101,7 @@ function scene:create( event )
     backgroundBox:setFillColor(0.2,0.6,0.2, 0.8)
     backgroundBox:setStrokeColor(0.2,0.9,0.4, 0.9)
 
-    local backgroundText = display.newText("Background", 100, 20, native.systemFont, 20)
+    local backgroundText = display.newText("Background", 100, 24, "Cronus Round", 24)
     backgroundText.x = display.contentCenterX
     backgroundText.y = display.contentHeight * 0.27
     backgroundText:setFillColor(0)
@@ -114,7 +114,8 @@ function scene:create( event )
         height = 150,
         shape = "roundedRect",
         cornerRadius = 5,
-        fontSize = 24,
+        fontSize = 28,
+        font = "Cronus Round",
         fillColor = { default={0.2,0.6,0.2,1}, over={0.1,1,0.7,0.4} },
         strokeColor = { default={0,0.8,0.4,1}, over={0.8,1,0.8,1} },
         strokeWidth = 4,
@@ -131,7 +132,8 @@ function scene:create( event )
         height = 150,
         shape = "roundedRect",
         cornerRadius = 5,
-        fontSize = 24,
+        fontSize = 28,
+        font = "Cronus Round",
         fillColor = { default={0.2,0.6,0.2,1}, over={0.1,1,0.7,0.4} },
         strokeColor = { default={0,0.8,0.4,1}, over={0.8,1,0.8,1} },
         strokeWidth = 4,
@@ -146,7 +148,7 @@ function scene:create( event )
     userBox:setFillColor(0.2,0.6,0.2, 0.8)
     userBox:setStrokeColor(0.2,0.9,0.4, 0.9)
 
-    local userText = display.newText("User", 100, 20, native.systemFont, 20)
+    local userText = display.newText("User", 100, 24, "Cronus Round", 24)
     userText.x = display.contentCenterX
     userText.y = display.contentHeight * 0.63
     userText:setFillColor(0)
@@ -159,7 +161,8 @@ function scene:create( event )
         height = 100,
         shape = "roundedRect",
         cornerRadius = 5,
-        fontSize = 28,
+        fontSize = 32,
+        font = "Cronus Round",
         fillColor = { default={0.2,0.6,0.2,1}, over={0.1,1,0.7,0.4} },
         strokeColor = { default={0.2,0.9,0.4,1}, over={0.8,1,0.8,1} },
         strokeWidth = 4,
@@ -176,7 +179,8 @@ function scene:create( event )
         height = 50,
         shape = "roundedRect",
         cornerRadius = 5,
-        fontSize = 18,
+        fontSize = 22,
+        font = "Cronus Round",
         fillColor = { default={0.2,0.6,0.2,1}, over={0.1,1,0.7,0.4} },
         strokeColor = { default={0.2,0.9,0.4,1}, over={0.8,1,0.8,1} },
         strokeWidth = 4,

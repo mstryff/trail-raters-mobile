@@ -99,6 +99,9 @@ local function systemEvents(event)
         --
         -- Go to the menu
         --
+        local fonts = native.getFontNames()
+        utility.print_r(fonts)
+
         system.setIdleTimer(true)
         local params = {}
         params.name = "joey fatone"
